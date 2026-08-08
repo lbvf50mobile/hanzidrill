@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中文数字读音</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    display: flex; justify-content: center; align-items: center;
+    min-height: 100vh; background: #1a1a2e; font-family: sans-serif;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 560px;
+  }
+  .bottom { grid-column: 1 / -1; }
+  button {
+    height: 64px; border: none; border-radius: 10px;
+    font-size: 20px; font-weight: bold; cursor: pointer;
+    background: #e94560; color: #fff;
+    transition: transform .1s, background .2s;
+  }
+  button:active { transform: scale(.95); background: #c73650; }
+  .bottom button { height: 56px; font-size: 18px; background: #0f3460; }
+  .bottom button:active { background: #0a2647; }
+</style>
+</head>
+<body>
+<div class="grid">
+  <button data-src="data/01一yi1.mp3">一 yī<br><small>1</small></button>
+  <button data-src="data/1000千.mp3">千 Qiān<br><small>1000</small></button>
+  <button data-src="data/03三sa1n.mp3">三 sān<br><small>3</small></button>
+  <button data-src="data/100百Bǎi.mp3">百 Bǎi<br><small>100</small></button>
+  <button data-src="data/07七qi1.mp3">七 qī<br><small>7</small></button>
+  <button data-src="data/10十shi2.mp3">十 shí<br><small>10</small></button>
+  <div class="bottom">
+    <button data-src="data/1370一千三百七十.mp3">1370 一千三百七十</button>
+  </div>
+</div>
+<script>
+  const audio = new Audio();
+  document.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      audio.src = btn.dataset.src;
+      audio.play();
+    });
+  });
+</script>
+</body>
+</html>
