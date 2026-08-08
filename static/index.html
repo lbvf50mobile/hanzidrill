@@ -12,30 +12,81 @@
   }
   .grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 10px;
-    width: 560px;
+    width: 750px;
+    max-width: 98vw;
   }
   .bottom { grid-column: 1 / -1; }
   button {
-    height: 64px; border: none; border-radius: 10px;
-    font-size: 20px; font-weight: bold; cursor: pointer;
-    background: #e94560; color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 5px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #87CEEB; /* Sky blue */
+    color: #1a1a2e; /* Dark text for readability */
     transition: transform .1s, background .2s;
   }
-  button:active { transform: scale(.95); background: #c73650; }
-  .bottom button { height: 56px; font-size: 18px; background: #0f3460; }
+  button:active { transform: scale(.95); background: #5FA8D3; }
+  button img { width: 100px; height: 100px; pointer-events: none; } /* pointer-events prevents image drag glitch */
+  .hanzi { font-size: 32px; font-weight: bold; line-height: 1.1; }
+  .pinyin { font-size: 15px; }
+  .number { font-size: 13px; opacity: 0.8; }
+  .bottom button { 
+    height: 60px; 
+    flex-direction: row; 
+    gap: 10px; 
+    font-size: 20px; 
+    font-weight: bold;
+    background: #0f3460; 
+    color: #fff;
+  }
   .bottom button:active { background: #0a2647; }
 </style>
 </head>
 <body>
 <div class="grid">
-  <button data-src="data/01一yi1.mp3">一 yī<br><small>1</small></button>
-  <button data-src="data/1000千.mp3">千 Qiān<br><small>1000</small></button>
-  <button data-src="data/03三sa1n.mp3">三 sān<br><small>3</small></button>
-  <button data-src="data/100百Bǎi.mp3">百 Bǎi<br><small>100</small></button>
-  <button data-src="data/07七qi1.mp3">七 qī<br><small>7</small></button>
-  <button data-src="data/10十shi2.mp3">十 shí<br><small>10</small></button>
+  <button data-src="data/01一yi1.mp3">
+    <img src="data/1.gif" alt="1">
+    <span class="hanzi">一</span>
+    <span class="pinyin">yī</span>
+    <span class="number">1</span>
+  </button>
+  <button data-src="data/1000千.mp3">
+    <img src="data/1000.gif" alt="1000">
+    <span class="hanzi">千</span>
+    <span class="pinyin">Qiān</span>
+    <span class="number">1000</span>
+  </button>
+  <button data-src="data/03三sa1n.mp3">
+    <img src="data/3.gif" alt="3">
+    <span class="hanzi">三</span>
+    <span class="pinyin">sān</span>
+    <span class="number">3</span>
+  </button>
+  <button data-src="data/100百Bǎi.mp3">
+    <img src="data/100.gif" alt="100">
+    <span class="hanzi">百</span>
+    <span class="pinyin">Bǎi</span>
+    <span class="number">100</span>
+  </button>
+  <button data-src="data/07七qi1.mp3">
+    <img src="data/7.gif" alt="7">
+    <span class="hanzi">七</span>
+    <span class="pinyin">qī</span>
+    <span class="number">7</span>
+  </button>
+  <button data-src="data/10十shi2.mp3">
+    <img src="data/10.gif" alt="10">
+    <span class="hanzi">十</span>
+    <span class="pinyin">shí</span>
+    <span class="number">10</span>
+  </button>
+
   <div class="bottom">
     <button data-src="data/1370一千三百七十.mp3">1370 一千三百七十</button>
   </div>
