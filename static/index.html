@@ -14,7 +14,7 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 10px;
-    width: 750px;
+    width: 1400px; /* Wider to fit the 200px images */
     max-width: 98vw;
   }
   .bottom { grid-column: 1 / -1; }
@@ -32,7 +32,7 @@
     transition: transform .1s, background .2s;
   }
   button:active { transform: scale(.95); background: #5FA8D3; }
-  button img { width: 100px; height: 100px; pointer-events: none; } /* pointer-events prevents image drag glitch */
+  button img { width: 200px; height: 200px; pointer-events: none; } 
   .hanzi { font-size: 32px; font-weight: bold; line-height: 1.1; }
   .pinyin { font-size: 15px; }
   .number { font-size: 13px; opacity: 0.8; }
