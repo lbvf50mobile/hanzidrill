@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>0 零</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #1a1a2e; font-family: sans-serif; }
+  
+  .container { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+  
+  .big-btn { 
+    display: flex; flex-direction: column; justify-content: center; align-items: center; 
+    padding: 10px 5px; border: none; border-radius: 10px; cursor: pointer; 
+    background: #87CEEB; color: #1a1a2e; transition: transform .1s, background .2s; 
+  }
+  .big-btn:active { transform: scale(.95); background: #5FA8D3; }
+  .big-btn img { width: 200px; height: 200px; pointer-events: none; } 
+  
+  .hanzi { font-size: 32px; font-weight: bold; line-height: 1.1; }
+  .pinyin { font-size: 15px; }
+  .number { font-size: 13px; opacity: 0.8; }
+  
+  .small-btn { 
+    height: 60px; padding: 0 60px; border: none; border-radius: 10px; 
+    font-size: 20px; font-weight: bold; cursor: pointer; 
+    background: #0f3460; color: #fff; transition: background .2s; 
+  }
+  .small-btn:active { background: #0a2647; }
+  
+  .back { position: fixed; top: 20px; left: 20px; background: #333; color: #fff; padding: 10px 15px; text-decoration: none; border-radius: 5px; }
+  .back:hover { background: #555; }
+</style>
+</head>
+<body>
+<a href="index.html" class="back">← 返回</a>
+
+<div class="container">
+  <!-- Large Sky Blue Button -->
+  <button class="big-btn" data-src="data/00零ling2.mp3">
+    <img src="data/0.gif" alt="0">
+    <span class="hanzi">零</span>
+    <span class="pinyin">líng</span>
+    <span class="number">0</span>
+  </button>
+
+  <!-- Small Dark Blue Button -->
+  <button class="small-btn" data-src="data/00零ling2.mp3">0 零</button>
+</div>
+
+<script>
+  const audio = new Audio();
+  document.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', () => { audio.src = btn.dataset.src; audio.play(); });
+  });
+</script>
+</body>
+</html>
