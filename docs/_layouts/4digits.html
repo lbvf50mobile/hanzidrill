@@ -8,15 +8,7 @@
 {% include style.html %}
 <body>
 <a href="index.html" class="back">← 返回</a>
-<div class="grid">
-  <button data-src="data/01一yi1.mp3"><img src="data/1.gif" alt="1"><span class="hanzi">一</span><span class="pinyin">yī</span><span class="number">1</span></button>
-  <button data-src="data/1000千.mp3"><img src="data/1000.gif" alt="1000"><span class="hanzi">千</span><span class="pinyin">Qiān</span><span class="number">1000</span></button>
-  <button data-src="data/03三sa1n.mp3"><img src="data/3.gif" alt="3"><span class="hanzi">三</span><span class="pinyin">sān</span><span class="number">3</span></button>
-  <button data-src="data/100百Bǎi.mp3"><img src="data/100.gif" alt="100"><span class="hanzi">百</span><span class="pinyin">Bǎi</span><span class="number">100</span></button>
-  <button data-src="data/07七qi1.mp3"><img src="data/7.gif" alt="7"><span class="hanzi">七</span><span class="pinyin">qī</span><span class="number">7</span></button>
-  <button data-src="data/10十shi2.mp3"><img src="data/10.gif" alt="10"><span class="hanzi">十</span><span class="pinyin">shí</span><span class="number">10</span></button>
-  <div class="bottom"><button data-src="data/1370一千三百七十.mp3">1370 一千三百七十</button></div>
-</div>
+{% include cards_and_button.html %}
 <script>
   const audio = new Audio();
   document.querySelectorAll('.grid button').forEach(btn => {

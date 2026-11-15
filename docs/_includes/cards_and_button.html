@@ -1,0 +1,14 @@
+<div class="grid">
+{% for crd in page.cards %}
+
+  <button data-src="{{crd.sound}}">
+    <img src="{{crd.img}}" alt="{{crd.alt}}">
+    <span class="hanzi">{{crd.hanzi}}</span>
+    <span class="pinyin">{{crd.pinyin}}</span>
+    <span class="number">{{crd.descr}}</span>
+  </button>
+{% endfor %}
+  <div class="bottom">
+    <button data-src="data/1370一千三百七十.mp3">1370 一千三百七十</button>
+  </div>
+</div>
