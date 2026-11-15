@@ -1,0 +1,16 @@
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #1a1a2e; font-family: sans-serif; }
+  .grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; width: 1400px; max-width: 98vw; }
+  .bottom { grid-column: 1 / -1; }
+  button { display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 10px 5px; border: none; border-radius: 10px; cursor: pointer; background: #87CEEB; color: #1a1a2e; transition: transform .1s, background .2s; }
+  button:active { transform: scale(.95); background: #5FA8D3; }
+  button img { width: 200px; height: 200px; pointer-events: none; } 
+  .hanzi { font-size: 32px; font-weight: bold; line-height: 1.1; }
+  .pinyin { font-size: 15px; }
+  .number { font-size: 13px; opacity: 0.8; }
+  .bottom button { height: 60px; flex-direction: row; gap: 10px; font-size: 20px; font-weight: bold; background: #0f3460; color: #fff; }
+  .bottom button:active { background: #0a2647; }
+  .back { position: fixed; top: 20px; left: 20px; background: #333; color: #fff; padding: 10px 15px; text-decoration: none; border-radius: 5px; }
+  .back:hover { background: #555; }
+</style>

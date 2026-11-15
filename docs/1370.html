@@ -1,42 +1,4 @@
-<!DOCTYPE html>
-<html lang="zh">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>1370 一千三百七十</title>
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #1a1a2e; font-family: sans-serif; }
-  .grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; width: 1400px; max-width: 98vw; }
-  .bottom { grid-column: 1 / -1; }
-  button { display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 10px 5px; border: none; border-radius: 10px; cursor: pointer; background: #87CEEB; color: #1a1a2e; transition: transform .1s, background .2s; }
-  button:active { transform: scale(.95); background: #5FA8D3; }
-  button img { width: 200px; height: 200px; pointer-events: none; } 
-  .hanzi { font-size: 32px; font-weight: bold; line-height: 1.1; }
-  .pinyin { font-size: 15px; }
-  .number { font-size: 13px; opacity: 0.8; }
-  .bottom button { height: 60px; flex-direction: row; gap: 10px; font-size: 20px; font-weight: bold; background: #0f3460; color: #fff; }
-  .bottom button:active { background: #0a2647; }
-  .back { position: fixed; top: 20px; left: 20px; background: #333; color: #fff; padding: 10px 15px; text-decoration: none; border-radius: 5px; }
-  .back:hover { background: #555; }
-</style>
-</head>
-<body>
-<a href="index.html" class="back">← 返回</a>
-<div class="grid">
-  <button data-src="data/01一yi1.mp3"><img src="data/1.gif" alt="1"><span class="hanzi">一</span><span class="pinyin">yī</span><span class="number">1</span></button>
-  <button data-src="data/1000千.mp3"><img src="data/1000.gif" alt="1000"><span class="hanzi">千</span><span class="pinyin">Qiān</span><span class="number">1000</span></button>
-  <button data-src="data/03三sa1n.mp3"><img src="data/3.gif" alt="3"><span class="hanzi">三</span><span class="pinyin">sān</span><span class="number">3</span></button>
-  <button data-src="data/100百Bǎi.mp3"><img src="data/100.gif" alt="100"><span class="hanzi">百</span><span class="pinyin">Bǎi</span><span class="number">100</span></button>
-  <button data-src="data/07七qi1.mp3"><img src="data/7.gif" alt="7"><span class="hanzi">七</span><span class="pinyin">qī</span><span class="number">7</span></button>
-  <button data-src="data/10十shi2.mp3"><img src="data/10.gif" alt="10"><span class="hanzi">十</span><span class="pinyin">shí</span><span class="number">10</span></button>
-  <div class="bottom"><button data-src="data/1370一千三百七十.mp3">1370 一千三百七十</button></div>
-</div>
-<script>
-  const audio = new Audio();
-  document.querySelectorAll('.grid button').forEach(btn => {
-    btn.addEventListener('click', () => { audio.src = btn.dataset.src; audio.play(); });
-  });
-</script>
-</body>
-</html>
+---
+layout: 4digits
+title: "1370 一千三百七十" 
+---
