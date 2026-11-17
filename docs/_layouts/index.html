@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中文数字练习</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #1a1a2e; font-family: sans-serif; }
+  .menu { display: flex; flex-direction: column; gap: 20px; align-items: center; }
+  .menu h1 { color: #fff; margin-bottom: 20px; }
+  .menu a { display: block; width: 300px; padding: 20px; background: #0f3460; color: #fff; text-decoration: none; font-size: 24px; font-weight: bold; text-align: center; border-radius: 10px; transition: background .2s; }
+  .menu a:hover { background: #e94560; }
+</style>
+</head>
+<body>
+<div class="menu">
+  <h1>选择数字</h1>
+  {% for url in page.urls %}
+  <a href="{{url.path}}">{{url.name}}</a>
+  {% endfor %}
+</div>
+</body>
+</html>
