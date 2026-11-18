@@ -2,3 +2,7 @@ title: HanziDrill
 source: docs
 baseurl: ""
 url: ""
+collections:
+  words:
+    output: true
+    permalink: /:name
