@@ -1,0 +1,5 @@
+title: HanziDrill
+collections:
+  words:
+    output: true
+    permalink: /:name
