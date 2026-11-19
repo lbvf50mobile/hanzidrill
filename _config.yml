@@ -1,7 +1,7 @@
 title: HanziDrill
 source: docs
 baseurl: "/hanzidrill"
-url: "https://lbvf50.github.io"
+url: "https://some_test_garbish.github.io"
 collections:
   words:
     output: true

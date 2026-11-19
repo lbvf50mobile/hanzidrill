@@ -17,7 +17,7 @@
 <div class="menu">
   <h1>选择数字</h1>
   {% for url in page.urls %}
-  <a href="{{url.path}}">{{url.name}}</a>
+  <a href="{{site.baseurl}}/{{url.path}}">{{url.name}}</a>
   {% endfor %}
 </div>
 </body>
