@@ -1,5 +1,8 @@
 # Hanzidrill - Stroke Order Animation and Prononciation
 
+
+https://lbvf50mobile.github.io/hanzidrill/
+
 This tool purpose is to start writing new Hanzi characters, the first
 approach. Getting animation and sound. Helps to make first writes of Hanzi
 Charackters and Hanzi Charackters combitations.
