@@ -1,14 +1,14 @@
 <div class="grid">
 {% for crd in page.cards %}
 
-  <button data-src="/{{crd.sound}}">
-    <img src="/{{crd.img}}" alt="{{crd.alt}}">
+<button data-src="{{site.baseurl}}/{{crd.sound}}">
+    <img src="{{site.baseurl}}/{{crd.img}}" alt="{{crd.alt}}">
     <span class="hanzi">{{crd.hanzi}}</span>
     <span class="pinyin">{{crd.pinyin}}</span>
     <span class="number">{{crd.descr}}</span>
   </button>
 {% endfor %}
   <div class="bottom">
-    <button data-src="/{{page.button.sound}}">{{page.button.text}}</button>
+    <button data-src="{{site.baseurl}}/{{page.button.sound}}">{{page.button.text}}</button>
   </div>
 </div>
