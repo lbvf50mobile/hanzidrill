@@ -11,6 +11,12 @@ characters additions.
 
 ## Oh how could I start it local?
 
+Learnint HARD WAY - the GitHub looks like to read config from the
+`docs/_config.yml` no need to create all these additional configs.
+
+
+## Just if you have nothing to do and wan to make some experiments. 
+
 I definatelly think you could. But there is a caveat. Different configurations
 for different hosts, different config files so need to do somethigh like that:
 
