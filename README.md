@@ -14,7 +14,7 @@ characters additions.
 
 ## Oh how could I start it local?
 
-Learnint HARD WAY - the GitHub looks like to read config from the
+Learning HARD WAY - the GitHub looks like to read config from the
 `docs/_config.yml` no need to create all these additional configs.
 
 
